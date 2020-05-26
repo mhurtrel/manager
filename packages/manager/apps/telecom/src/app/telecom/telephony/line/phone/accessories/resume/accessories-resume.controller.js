@@ -3,8 +3,9 @@ import remove from 'lodash/remove';
 
 export default class TelecomTelephonyLinePhoneAccessoriesResumeCtrl {
   /* @ngInject */
-  constructor($q, TucTelephonyAccessoriesOrderProcess) {
+  constructor($q, atInternet, TucTelephonyAccessoriesOrderProcess) {
     this.$q = $q;
+    this.atInternet = atInternet;
     this.TucTelephonyAccessoriesOrderProcess = TucTelephonyAccessoriesOrderProcess;
   }
 
@@ -21,7 +22,7 @@ export default class TelecomTelephonyLinePhoneAccessoriesResumeCtrl {
     };
 
     this.loading.init = true;
-    this.process = this.TucTelephonyAccessoriesOrderProcess.getOrderProcess();
+    this.processc = this.TucTelephonyAccessoriesOrderProcess.getOrderProcess();
 
     return this.TucTelephonyAccessoriesOrderProcess.getOrderCheckout()
       .then((order) => {
@@ -42,5 +43,30 @@ export default class TelecomTelephonyLinePhoneAccessoriesResumeCtrl {
       .finally(() => {
         this.loading.init = false;
       });
+  }
+
+  submit() {
+    this.track(
+      'telecom::telephony::billingAccount::line::phone::accessories::summary::validate',
+    );
+    this.atInternet.trackPage({
+      name:
+        'telecom::telephony::billingAccount::line::phone::accessories::summary',
+    });
+    this.process.currentView = 'finalize';
+  }
+
+  goBack() {
+    this.track(
+      'telecom::telephony::billingAccount::line::phone::accessories::summary::previous',
+    );
+    this.process.currentView = 'shipping';
+  }
+
+  track(name) {
+    this.atInternet.trackClick({
+      name,
+      type: 'action',
+    });
   }
 }
