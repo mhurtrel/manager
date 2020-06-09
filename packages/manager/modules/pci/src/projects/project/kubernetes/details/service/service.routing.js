@@ -25,6 +25,20 @@ export default /* @ngInject */ ($stateProvider) => {
           projectId,
         }),
 
+      resetKubeconfig: /* @ngInject */ (
+        $state,
+        cluster,
+        kubeId,
+        projectId,
+      ) => () =>
+        $state.go(
+          'pci.projects.project.kubernetes.details.service.reset-kubeconfig',
+          {
+            kubeId,
+            projectId,
+          },
+        ),
+
       terminate: /* @ngInject */ ($state, kubeId, projectId) => () =>
         $state.go('pci.projects.project.kubernetes.details.service.terminate', {
           kubeId,
