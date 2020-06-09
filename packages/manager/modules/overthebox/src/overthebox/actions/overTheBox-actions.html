@@ -18,7 +18,7 @@
                     type="button"
                     class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
                     data-ng-click="$ctrl.getActions()"
-                    title="{{'common_refresh' | translate}}"
+                    title="{{'overTheBox_actions_refresh' | translate}}"
                 >
                     <span class="fa fa-refresh" aria-hidden="true"></span>
                 </button>
@@ -28,7 +28,7 @@
                 data-row-loader="$ctrl.transformItem($row)"
             >
                 <oui-column
-                    data-title="'overTheBox_actions_name' | translate"
+                    data-title=":: 'overTheBox_actions_name' | translate"
                     data-property="name"
                     data-sortable="asc"
                 ></oui-column>
@@ -61,7 +61,7 @@
                     data-sortable
                 >
                     <span
-                        class="label"
+                        class="oui-status"
                         data-ng-class="{
                                 'label-success': $row.status === 'done',
                                 'label-danger': $row.status === 'error',
