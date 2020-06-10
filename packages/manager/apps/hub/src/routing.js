@@ -1,10 +1,6 @@
-import filter from 'lodash/filter';
-import get from 'lodash/get';
-import head from 'lodash/head';
-import map from 'lodash/map';
+import { filter, get, head, map, mapValues, set } from 'lodash-es';
+
 import { BillingService, User } from '@ovh-ux/manager-models';
-import mapValues from 'lodash/mapValues';
-import set from 'lodash/set';
 
 import { BILLING_REDIRECTIONS } from './constants';
 
@@ -65,6 +61,7 @@ export default /* @ngInject */ ($stateProvider, $urlRouterProvider) => {
           transformBillingServices(billingServices),
         ),
       bills: /* @ngInject */ (hub) => hub.bills,
+      debt: /* @ngInject */ (hub) => hub.debt,
       catalog: /* @ngInject */ (hub) => hub.catalog,
       certificates: /* @ngInject */ (hub) => hub.certificates.data,
       me: /* @ngInject */ (certificates, hub) =>

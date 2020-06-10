@@ -1,3 +1,21 @@
+## [6.1.2](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-payment-method@6.1.1...@ovh-ux/ng-ovh-payment-method@6.1.2) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+
+## [6.1.1](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-payment-method@6.1.0...@ovh-ux/ng-ovh-payment-method@6.1.1) (2020-06-02)
+
+
+### Performance Improvements
+
+* use lodash-es instead of lodash ([#3039](https://github.com/ovh/manager/issues/3039)) ([7cc6cff](https://github.com/ovh/manager/commit/7cc6cff228f64d69ffbfaaa0f6560342b790f7f5))
+
+
+
 # [6.1.0](https://github.com/ovh/manager/compare/@ovh-ux/ng-ovh-payment-method@6.0.1...@ovh-ux/ng-ovh-payment-method@6.1.0) (2020-04-01)
 
 
