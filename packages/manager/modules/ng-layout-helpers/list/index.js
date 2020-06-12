@@ -43,7 +43,7 @@ const mapFilterForIceberg = (comparator, reference) =>
  * @sortOrder: ASC or DESC, sorting order
  */
 export const stateResolves = {
-  resources: /* @ngInject */ ($transition$, apiPath, iceberg) => {
+  resources: /* @ngInject */ ($q, $transition$, apiPath, iceberg) => {
     const { filter, pageSize, sort, sortOrder } = $transition$.params();
     let { page } = $transition$.params();
     const filtersParsed = JSON.parse(filter);
@@ -72,7 +72,20 @@ export const stateResolves = {
       );
     });
 
-    return request.execute(null).$promise;
+    /* eslint-disable no-console */
+    console.time('load resources');
+    return request
+      .execute(null)
+      .$promise.then((resources) => {
+        console.timeEnd('load resources');
+        console.log('resources', resources);
+        return resources;
+      })
+      .catch((error) => {
+        console.timeEnd('load resources');
+        console.log('resources error', error);
+        return $q.reject();
+      });
   },
 
   paginationNumber: /* @ngInject */ (resources) =>
