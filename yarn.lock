@@ -1883,21 +1883,6 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@ovh-ux/manager-cloud-styles@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@ovh-ux/manager-cloud-styles/-/manager-cloud-styles-0.3.1.tgz#c4eb5175d4ef9cd246354f57e79d8e64594bea8a"
-  integrity sha512-iz4Xf38IvTHWKKgdeC9t/z5PVZVgRBpTWe5TOf7z5Rvy8k1/P8+jPx43gLS6YTDO4yrT6Im2HEdSVFzbdVE7uw==
-
-"@ovh-ux/manager-enterprise-cloud-database@^0.1.10", "@ovh-ux/manager-enterprise-cloud-database@^0.1.9":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@ovh-ux/manager-enterprise-cloud-database/-/manager-enterprise-cloud-database-0.1.10.tgz#11682410fa8f5a3d1711aedb77fb48c339daec78"
-  integrity sha512-nJ1ON8QGfgGuVoUMTWv69gcyDKXDuLEf2EBPpNc0gXALmIgbd82L/1gOkqN/XfBnQj2jrhOsAGEbXDGDzyH4CQ==
-  dependencies:
-    flag-icon-css "^3.2.0"
-    lodash "^4.17.14"
-    moment "^2.22.2"
-    zxcvbn "^4.4.2"
-
 "@ovh-ux/ng-ovh-api-wrappers@^4.0.7":
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/@ovh-ux/ng-ovh-api-wrappers/-/ng-ovh-api-wrappers-4.0.7.tgz#f07cff3c42ef1c9d1655e2300617528a7d8b2f4f"
@@ -12878,11 +12863,6 @@ moment@^2.10.3, moment@^2.14.1:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.25.3.tgz#252ff41319cf41e47761a1a88cab30edfe9808c0"
   integrity sha512-PuYv0PHxZvzc15Sp8ybUCoQ+xpyPWvjOuK72a5ovzp2LI32rJXOiIfyoFoYvG3s6EwwrdkMyWuRiEHSZRLJNdg==
 
-moment@^2.22.2:
-  version "2.26.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.26.0.tgz#5e1f82c6bafca6e83e808b30c8705eed0dcbd39a"
-  integrity sha512-oIixUO+OamkUkwjhAVE18rAMfRJNsNe/Stid/gwHSOfHrOtw9EhAY2AHvdKZ/k/MggcYELFCJz/Sn2pL8b8JMw==
-
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -13795,10 +13775,10 @@ ovh-angular-responsive-tabs@^4.0.0:
   resolved "https://registry.yarnpkg.com/ovh-angular-responsive-tabs/-/ovh-angular-responsive-tabs-4.0.0.tgz#85b66d7032612c3ed1a14cb29f83d1331b50c1df"
   integrity sha1-hbZtcDJhLD7RoUyyn4PRMxtQwd8=
 
-ovh-api-services@^9.42.0:
-  version "9.42.0"
-  resolved "https://registry.yarnpkg.com/ovh-api-services/-/ovh-api-services-9.42.0.tgz#8935f1ea27328ea39cf4701f3a9f7ec995245baf"
-  integrity sha512-z4NhXJnEuhv75xQoqmnBrrlBUMOiB1dl01NfAfBabxP7DhiAeneQkZ35YaP9FIu7Kd799MCaOb75ENkexksTEA==
+ovh-api-services@^9.44.2:
+  version "9.44.2"
+  resolved "https://registry.yarnpkg.com/ovh-api-services/-/ovh-api-services-9.44.2.tgz#54d23a5c8d531103cb28dfb48a697cbc842a28e4"
+  integrity sha512-BsKL/M10IKMaf8xLcrhuupxiXiPh0c84GShq/P8aEmk+JGxyxkRlNb0AUkY2VKMqSl6G0cUXphMPNyAKxuYVaQ==
   dependencies:
     lodash "^4.17.15"
 
@@ -19610,9 +19590,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-fetch@^3.0.0:
   version "3.0.0"
