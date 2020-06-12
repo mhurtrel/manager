@@ -7,8 +7,7 @@ import ngOvhCheckboxTable from '@ovh-ux/ng-ovh-checkbox-table';
 import '@ovh-ux/ng-pagination-front';
 import 'ovh-api-services';
 
-import 'ovh-ui-kit/dist/oui.css';
-import 'ovh-ui-kit/dist/oui-olt.css';
+import '@ovh-ux/ui-kit/dist/css/oui.css';
 import 'ovh-ui-kit-bs/dist/css/oui-bs3.css';
 import 'ovh-manager-webfont/dist/css/ovh-font.css';
 import 'font-awesome/css/font-awesome.css';
