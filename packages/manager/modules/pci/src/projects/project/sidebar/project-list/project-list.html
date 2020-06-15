@@ -63,13 +63,19 @@
                     data-ng-repeat="project in $ctrl.projects | filter:$ctrl.searchText track by $index"
                 >
                     <a
-                        ui-sref="pci.projects.project({ projectId: project.project_id })"
+                        data-ng-click="$ctrl.goToProjectDetails(project)"
                         class="d-flex text-white"
                     >
                         <span
                             class="text-truncate"
                             data-ng-bind="project.description"
                         ></span>
+                        <span
+                            data-ng-if="project.status === 'suspended'"
+                            class="oui-icon oui-icon_bicolor oui-icon-warning_circle project-warning-icon"
+                            aria-hidden="true"
+                        >
+                        </span>
                         <span
                             class="text-white ml-auto my-auto oui-icon oui-icon-chevron-right"
                             style="font-size: 0.8rem;"
