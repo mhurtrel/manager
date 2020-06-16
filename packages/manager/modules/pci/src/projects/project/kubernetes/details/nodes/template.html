@@ -55,9 +55,9 @@
             <span
                 class="oui-badge"
                 data-ng-class="{
-                    'oui-status_success' : $row.status === $ctrl.STATUS.READY,
-                    'oui-status_warning' : $ctrl.Kubernetes.constructor.isProcessing($row.status),
-                    'oui-status_error' : $row.status === $ctrl.STATUS.ERROR
+                    'success' : $row.status === $ctrl.STATUS.READY,
+                    'warning' : $ctrl.Kubernetes.constructor.isProcessing($row.status),
+                    'error' : $row.status === $ctrl.STATUS.ERROR
                     }"
                 data-translate="{{:: 'kube_nodes_status_' + $row.status }}"
             >

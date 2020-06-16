@@ -48,10 +48,10 @@
         <span
             class="oui-badge"
             data-ng-class="{
-                'oui-status_success': $row.statusGroup === 'ACTIVE',
-                'oui-status_warning': $row.statusGroup === 'PENDING',
-                'oui-status_error': $row.statusGroup === 'ERROR',
-                'oui-status_info': $row.statusGroup === $row.status,
+                'success': $row.statusGroup === 'ACTIVE',
+                'warning': $row.statusGroup === 'PENDING',
+                'error': $row.statusGroup === 'ERROR',
+                'info': $row.statusGroup === $row.status,
             }"
         >
             <span
