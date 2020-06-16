@@ -43,8 +43,9 @@
                         <oui-checkbox
                             id="domainWwwNeeded"
                             data-model="selected.domainWwwNeeded"
-                            data-text="{{ 'hosting_tab_DOMAINS_configuration_modify_step1_domain_name_www_question' | translate: { t0: getSelectedDomainToDisplay(true) } }}"
-                        >
+                            ><span
+                                data-translate="hosting_tab_DOMAINS_configuration_modify_step1_domain_name_www_question"
+                            ></span>
                         </oui-checkbox>
                     </div>
                 </div>
@@ -97,7 +98,7 @@
                                     data-ng-options="runtime.name for runtime in model.runtimes track by runtime.name"
                                 >
                                     <option
-                                        value=""
+                                        value
                                         data-translate="select_placeholder"
                                         disabled
                                     ></option>
@@ -303,7 +304,7 @@
                                 data-ng-options="countryIp as countryIp.ip group by ((('country_' + countryIp.country | translate) == 'country_' + countryIp.country)? countryIp.country: ('country_' + countryIp.country | translate)) for countryIp in hostingProxy.countriesIp | orderBy:[('country_' + countryIp.country | translate)] track by countryIp.ip"
                             >
                                 <option
-                                    value=""
+                                    value
                                     data-translate="hosting_tab_DOMAINS_configuration_add_step2_mode_OVH_countriesIp_none"
                                 ></option>
                             </select>

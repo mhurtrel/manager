@@ -331,7 +331,7 @@
                             ></td>
                             <td class="text-center">
                                 <span
-                                    class="oui-status"
+                                    class="oui-badge"
                                     data-ng-class="{'oui-status_success': element.dumpsCount > 0, 'oui-status_info': element.dumpsCount <= 0}"
                                     data-ng-bind="element.dumpsCount"
                                 >
@@ -350,7 +350,10 @@
                                 </button>
                             </td>
                             <td class="text-center">
-                                <oui-action-menu data-compact data-align="end">
+                                <oui-action-menu
+                                    data-compact
+                                    data-placement="end"
+                                >
                                     <oui-action-menu-item
                                         data-on-click="setAction('database/update-password/hosting-database-update-password', element.name)"
                                     >
