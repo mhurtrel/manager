@@ -6,11 +6,11 @@ angular.module('managerApp').controller(
     constructor(
       $translate,
       TucPackMigrationProcess,
-      OvhApiConnectivityEligibility,
+      OvhApiConnectivityEligibilitySearch,
     ) {
       this.$translate = $translate;
       this.TucPackMigrationProcess = TucPackMigrationProcess;
-      this.OvhApiConnectivityEligibility = OvhApiConnectivityEligibility;
+      this.OvhApiConnectivityEligibilitySearch = OvhApiConnectivityEligibilitySearch;
     }
 
     /*= =====================================
@@ -33,6 +33,7 @@ angular.module('managerApp').controller(
 
       this.process = this.TucPackMigrationProcess.getMigrationProcess();
 
+      console.log('buildings', this.process.selectedOffer.buildings);
       this.process.selectedOffer.buildings.forEach((building, i) => {
         // check if the building name is empty to set a name to display in the select component
         if (building.name === '') {
@@ -47,7 +48,7 @@ angular.module('managerApp').controller(
           building: building.reference,
         };
 
-        this.OvhApiConnectivityEligibility.v6()
+        this.OvhApiConnectivityEligibilitySearch.v6()
           .buildingDetails({}, params)
           .$promise.then((buildingDetails) => {
             if (has(buildingDetails, 'result.stairs')) {
@@ -177,7 +178,7 @@ angular.module('managerApp').controller(
           const params = {
             building: this.model.selectedBuilding.reference,
           };
-          this.OvhApiConnectivityEligibility.v6()
+          this.OvhApiConnectivityEligibilitySearch.v6()
             .buildingDetails({}, params)
             .$promise.then((buildingDetails) => {
               if (has(buildingDetails, 'result.stairs')) {

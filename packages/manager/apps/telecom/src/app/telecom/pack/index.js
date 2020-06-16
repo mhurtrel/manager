@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 import internetAccess from './internet-access';
+import packMove from './move';
 import packVoipLineActivation from './slots/voipLine/activation/pack-voipLine-activation.module';
 import hostedEmailDetail from './slots/hostedEmail/detail';
 
@@ -16,6 +17,7 @@ angular
     internetAccess,
     hostedEmailDetail,
     packVoipLineActivation,
+    packMove,
   ])
   .controller('PackCtrl', controller)
   .config(routing)
