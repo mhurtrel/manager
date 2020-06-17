@@ -125,15 +125,6 @@ angular
         clearAllCache: dedicatedCloudCache.all,
       });
 
-    this.getNewPrices = (serviceName) =>
-      OvhHttp.get('/dedicatedCloud/{serviceName}/newPrices', {
-        rootPath: 'apiv6',
-        urlParams: {
-          serviceName,
-        },
-        cache: 'UNIVERS_DEDICATED_CLOUD_NEW_PRICES',
-      });
-
     /* ------- DATACENTER -------*/
 
     this.getDatacenters = (serviceName) =>
@@ -443,47 +434,6 @@ angular
             count: elementsByPage,
             offset: elementsToSkip,
           },
-        },
-      );
-
-    /* ------- SUB DATACENTER BACKUP -------*/
-
-    this.getVeeam = (serviceName, datacenterId, forceRefresh) =>
-      OvhHttp.get(
-        '/dedicatedCloud/{serviceName}/datacenter/{datacenterId}/backup',
-        {
-          rootPath: 'apiv6',
-          urlParams: {
-            serviceName,
-            datacenterId,
-          },
-          clearCache: forceRefresh,
-        },
-      );
-
-    this.enableVeeam = (serviceName, datacenterId) =>
-      OvhHttp.post(
-        '/dedicatedCloud/{serviceName}/datacenter/{datacenterId}/backup/enable',
-        {
-          rootPath: 'apiv6',
-          urlParams: {
-            serviceName,
-            datacenterId,
-          },
-          broadcast: 'datacenter.veeam.reload',
-        },
-      );
-
-    this.disableVeeam = (serviceName, datacenterId) =>
-      OvhHttp.post(
-        '/dedicatedCloud/{serviceName}/datacenter/{datacenterId}/backup/disable',
-        {
-          rootPath: 'apiv6',
-          urlParams: {
-            serviceName,
-            datacenterId,
-          },
-          broadcast: 'datacenter.veeam.reload',
         },
       );
 

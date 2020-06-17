@@ -1,3 +1,49 @@
+# [9.4.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-core@9.3.0...@ovh-ux/manager-core@9.4.0) (2020-06-16)
+
+
+### Features
+
+* use redirection service for contact management ([6efbb2b](https://github.com/ovh/manager/commit/6efbb2b7e43d19daf5416ba603700d461955de50))
+
+
+### Performance Improvements
+
+* replace lodash with lodash-es ([#3052](https://github.com/ovh/manager/issues/3052)) ([2945475](https://github.com/ovh/manager/commit/2945475fe7c14db407973ddd5b2dde0bf2739489))
+
+
+
+# [9.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-core@9.2.0...@ovh-ux/manager-core@9.3.0) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+### Features
+
+* **oui-angular:** add configuration for pagination ([#3027](https://github.com/ovh/manager/issues/3027)) ([22ae217](https://github.com/ovh/manager/commit/22ae217287964a042ed214915cdd18877b8823fa))
+
+
+
+# [9.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-core@9.1.0...@ovh-ux/manager-core@9.2.0) (2020-05-14)
+
+
+### Features
+
+* **core:** add agreements url for US ([fc37080](https://github.com/ovh/manager/commit/fc37080f31e91635a2b19323270e8acc62f2dffb))
+
+
+
+# [9.1.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-core@9.0.2...@ovh-ux/manager-core@9.1.0) (2020-04-20)
+
+
+### Features
+
+* **core:** add function to convert language from OVH to BCP 47 ([0fbdb29](https://github.com/ovh/manager/commit/0fbdb29a75a8344318f6372da9726a5738d4a745))
+
+
+
 ## [9.0.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-core@9.0.1...@ovh-ux/manager-core@9.0.2) (2020-04-06)
 
 
@@ -108,8 +154,6 @@
 ### BREAKING CHANGES
 
 * **core:** remove ovh-api-services peer dependency
-
-Signed-off-by: frenauvh <florian.renaut@corp.ovh.com>
 
 
 

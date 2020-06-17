@@ -28,6 +28,11 @@ export default class {
     Alerter,
     Navigator,
     constants,
+    emailOptionIds,
+    emailOptionDetachInformation,
+    isEmailDomainAvailable,
+    goToDetachEmail,
+    goToDetachPrivateDB,
     User,
     HostingDatabase,
     HostingDomain,
@@ -35,11 +40,18 @@ export default class {
     HostingIndy,
     HostingOvhConfig,
     HostingTask,
+    logs,
+    pendingTasks,
     PrivateDatabase,
+    privateDatabasesDetachable,
+    privateDatabasesIds,
+    user,
     HOSTING_STATUS,
+    OVH_ORDER_URLS,
   ) {
     this.$scope = $scope;
     this.$scope.HOSTING_STATUS = HOSTING_STATUS;
+    this.$scope.logs = logs;
     this.$rootScope = $rootScope;
     this.$location = $location;
     this.$q = $q;
@@ -52,6 +64,11 @@ export default class {
     this.Alerter = Alerter;
     this.Navigator = Navigator;
     this.constants = constants;
+    this.emailOptionIds = emailOptionIds;
+    this.emailOptionDetachInformation = emailOptionDetachInformation;
+    this.isEmailDomainAvailable = isEmailDomainAvailable;
+    this.goToDetachEmail = goToDetachEmail;
+    this.goToDetachPrivateDB = goToDetachPrivateDB;
     this.User = User;
     this.HostingDatabase = HostingDatabase;
     this.HostingDomain = HostingDomain;
@@ -59,7 +76,12 @@ export default class {
     this.HostingIndy = HostingIndy;
     this.HostingOvhConfig = HostingOvhConfig;
     this.HostingTask = HostingTask;
+    this.pendingTasks = pendingTasks;
     this.PrivateDatabase = PrivateDatabase;
+    this.privateDatabasesDetachable = privateDatabasesDetachable;
+    this.privateDatabasesIds = privateDatabasesIds;
+    this.user = user;
+    this.OVH_ORDER_URLS = OVH_ORDER_URLS;
   }
 
   $onInit() {
@@ -71,6 +93,13 @@ export default class {
     this.$scope.edit = {
       active: false,
     };
+
+    this.$scope.emailOptionIds = this.emailOptionIds;
+    this.$scope.emailOptionDetachInformation = this.emailOptionDetachInformation;
+    this.$scope.privateDatabasesDetachable = this.privateDatabasesDetachable;
+    this.$scope.goToDetachEmail = this.goToDetachEmail;
+    this.$scope.goToDetachPrivateDB = this.goToDetachPrivateDB;
+    this.$scope.pendingTasks = this.pendingTasks;
 
     this.$scope.stepPath = '';
     this.$scope.currentAction = null;
@@ -257,19 +286,11 @@ export default class {
         nbDataBaseInclude: 0,
       };
 
-      return this.$q
-        .all({
-          privateDatabaseIds: this.HostingDatabase.getPrivateDatabaseIds(
-            this.$stateParams.productId,
-          ),
-          hasPrivateSqlToActivate: this.HostingDatabase.getHasPrivateSqlToActivate(
-            this.$stateParams.productId,
-          ),
-        })
-        .then(({ privateDatabaseIds, hasPrivateSqlToActivate }) => {
-          this.$scope.hosting.sqlPriveInfo.privateDatabaseIds = privateDatabaseIds;
-          this.$scope.hosting.sqlPriveInfo.hasPrivateDatabaseToActivate = hasPrivateSqlToActivate;
-        });
+      return this.HostingDatabase.getHasPrivateSqlToActivate(
+        this.$stateParams.productId,
+      ).then((hasPrivateSqlToActivate) => {
+        this.$scope.hosting.sqlPriveInfo.hasPrivateDatabaseToActivate = hasPrivateSqlToActivate;
+      });
     };
 
     //---------------------------------------------
@@ -464,16 +485,17 @@ export default class {
           this.$scope.localSeoAvailable = true;
         }
 
-        this.tabMenu.items.push({
-          type: 'SEPARATOR',
-        });
-
-        if (!hosting.isCloudWeb) {
-          this.tabMenu.items.push({
-            label: this.$translate.instant('hosting_tab_menu_emails'),
-            target: `#/configuration/email-domain/${this.$stateParams.productId}?tab=MAILING_LIST`,
-            type: 'LINK',
-          });
+        if (!hosting.isCloudWeb && this.isEmailDomainAvailable) {
+          this.tabMenu.items.push([
+            {
+              type: 'SEPARATOR',
+            },
+            {
+              label: this.$translate.instant('hosting_tab_menu_emails'),
+              target: `#/configuration/email-domain/${this.$stateParams.productId}?tab=MAILING_LIST`,
+              type: 'LINK',
+            },
+          ]);
         }
       });
   }
@@ -502,43 +524,37 @@ export default class {
           },
         );
 
-        this.HostingTask.getPending(this.$stateParams.productId)
-          .then((tasks) => {
-            let queue;
-            if (tasks && tasks.length > 0) {
-              const taskPendingMessage = this.$translate.instant(
-                `hosting_global_php_version_pending_task_${tasks[0].function.replace(
-                  /ovhConfig\//,
-                  '',
-                )}`,
-              );
-              set(
-                this.$scope.ovhConfig,
-                'taskPending',
-                taskPendingMessage ||
-                  this.$translate.instant(
-                    'hosting_global_php_version_pending_task_common',
-                  ),
-              );
+        let queue;
+        if (this.pendingTasks && this.pendingTasks.length > 0) {
+          const taskPendingMessage = this.$translate.instant(
+            `hosting_global_php_version_pending_task_${this.pendingTasks[0].function.replace(
+              /ovhConfig\//,
+              '',
+            )}`,
+          );
+          set(
+            this.$scope.ovhConfig,
+            'taskPending',
+            taskPendingMessage ||
+              this.$translate.instant(
+                'hosting_global_php_version_pending_task_common',
+              ),
+          );
 
-              queue = map(tasks, (task) =>
-                this.HostingTask.poll(this.$stateParams.productId, task).catch(
-                  () => {
-                    set(this.$scope.ovhConfig, 'taskPendingError', false);
-                  },
-                ),
-              );
+          queue = map(this.pendingTasks, (task) =>
+            this.HostingTask.poll(this.$stateParams.productId, task).catch(
+              () => {
+                set(this.$scope.ovhConfig, 'taskPendingError', false);
+              },
+            ),
+          );
 
-              this.$q.all(queue).then(() => {
-                this.loadOvhConfig();
-              });
-            } else {
-              set(this.$scope.ovhConfig, 'taskPending', false);
-            }
-          })
-          .catch(() => {
-            set(this.$scope.ovhConfig, 'taskPending', false);
+          this.$q.all(queue).then(() => {
+            this.loadOvhConfig();
           });
+        } else {
+          set(this.$scope.ovhConfig, 'taskPending', false);
+        }
 
         this.HostingTask.getError(this.$stateParams.productId)
           .then((tasks) => {
@@ -622,32 +638,13 @@ export default class {
     });
   }
 
-  setUrchin() {
-    if (['gra1', 'gra2'].includes(this.$scope.hostingProxy.datacenter)) {
-      // FOR GRAVELINE
-      this.$scope.urchin = URI.expand(this.constants.urchin_gra, {
-        serviceName: this.$scope.hosting.serviceName,
-        cluster: this.$scope.hostingProxy.cluster,
-      }).toString();
-    } else {
-      this.$scope.urchin = URI.expand(this.constants.urchin, {
-        serviceName: this.$scope.hosting.serviceName,
-        cluster: this.$scope.hostingProxy.cluster,
-      }).toString();
-    }
-  }
-
   getPrivateDatabases() {
-    return this.HostingDatabase.getPrivateDatabaseIds(
-      this.$stateParams.productId,
-    ).then((databaseIds) =>
-      this.$q.all(
-        databaseIds.map((id) =>
-          this.$scope.isAdminPrivateDb(id).then((isAdmin) => ({
-            name: id,
-            isAdmin,
-          })),
-        ),
+    return this.$q.all(
+      this.privateDatabasesIds.map((id) =>
+        this.$scope.isAdminPrivateDb(id).then((isAdmin) => ({
+          name: id,
+          isAdmin,
+        })),
       ),
     );
   }
@@ -716,8 +713,10 @@ export default class {
             this.$stateParams.productId,
           ),
           hostingProxy: this.Hosting.getHosting(this.$stateParams.productId),
-          hostingUrl: this.User.getUrlOfEndsWithSubsidiary('hosting'),
-          domainOrderUrl: this.User.getUrlOf('domainOrder'),
+          hostingUrl: this.OVH_ORDER_URLS.orderHosting[this.user.ovhSubsidiary],
+          domainOrderUrl: this.OVH_ORDER_URLS.orderDomain[
+            this.user.ovhSubsidiary
+          ],
         });
       })
       .then(({ serviceInfos, hostingProxy, hostingUrl, domainOrderUrl }) => {
@@ -734,7 +733,6 @@ export default class {
         this.$scope.sshUrl = `ssh://${hostingProxy.serviceManagementAccess.ssh.url}:${hostingProxy.serviceManagementAccess.ssh.port}/`;
         this.$scope.urls.hosting = hostingUrl;
         this.$scope.urlDomainOrder = domainOrderUrl;
-        this.setUrchin();
 
         return this.User.getUrlOf('guides');
       })

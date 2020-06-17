@@ -1,4 +1,4 @@
-import pick from 'lodash/pick';
+import { pick } from 'lodash-es';
 
 import { ListLayoutHelper } from '@ovh-ux/manager-ng-layout-helpers';
 import { urlQueryParams, params, component, resolves } from './config';
@@ -35,6 +35,9 @@ export default /* @ngInject */ ($stateProvider) => {
       paginationSize: /* @ngInject */ ($transition$) =>
         $transition$.params().pageSize,
       paginationTotalCount: /* @ngInject */ (rows) => rows.length,
+    },
+    atInternet: {
+      rename: 'app::dashboard::products::ms-services-sharepoint',
     },
   });
 };

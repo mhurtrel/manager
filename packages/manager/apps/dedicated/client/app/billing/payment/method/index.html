@@ -4,7 +4,7 @@
     <oui-message
         class="mb-4"
         data-ng-if="$ctrl.hasPendingValidationBankAccount"
-        data-type="warning"
+        data-type="success"
         data-dismissable
     >
         <span
@@ -12,6 +12,12 @@
         ></span>
         <span
             data-translate="billing_payment_method_bank_account_processing_delay"
+        ></span>
+    </oui-message>
+
+    <oui-message class="mb-4" data-type="warning" data-dismissable>
+        <span
+            data-translate="billing_payment_method_credit_card_disclaimer"
         ></span>
     </oui-message>
 
@@ -121,7 +127,7 @@
                 data-aria-label="{{ :: ('billing_payment_method_table_action_download_procedure' | translate) + ' ' + ('billing_common_link_new_window' | translate) }}"
                 data-href="{{ $row.original.validationDocumentLink }}"
                 data-external
-                data-ng-if="$row.paymentType === $ctrl.OVH_PAYMENT_METHOD_TYPE.BANK_ACCOUNT && $row.status === $ctrl.OVH_PAYMENT_MEAN_STATUS.PENDING_VALIDATION"
+                data-ng-if="$row.paymentType === $ctrl.OVH_PAYMENT_METHOD_TYPE.BANK_ACCOUNT && $row.status === $ctrl.OVH_PAYMENT_MEAN_STATUS.PENDING_VALIDATION && !['FR', 'DE'].includes($ctrl.currentUser.ovhSubsidiary)"
             >
                 <span
                     data-translate="billing_payment_method_table_action_download_procedure"

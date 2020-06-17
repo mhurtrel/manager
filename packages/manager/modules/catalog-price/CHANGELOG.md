@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-price@1.0.2...@ovh-ux/manager-catalog-price@1.1.0) (2020-05-13)
+
+
+### Features
+
+* **dedicated.cloud:** add veeam backup storage ([#2320](https://github.com/ovh/manager/issues/2320)) ([61f53d4](https://github.com/ovh/manager/commit/61f53d4b6507158941a76defbc72b7302a4206f3))
+
+
+
 ## [1.0.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-catalog-price@1.0.1...@ovh-ux/manager-catalog-price@1.0.2) (2020-03-18)
 
 
@@ -30,8 +39,3 @@
 
 * **modules:** This component is just the export of the one located in web/app/components/manager-order-catalog-price.
 The web located component should be replaced by the new one (refactor will be done once this module is released)
-
-Signed-off-by: Jérémy De-Cesare <jeremy.de-cesare@corp.ovh.com>
-
-
-

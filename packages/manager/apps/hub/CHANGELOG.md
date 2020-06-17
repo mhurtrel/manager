@@ -1,3 +1,98 @@
+## [1.4.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.4.1...@ovh-ux/manager-hub-app@1.4.2) (2020-06-16)
+
+
+### Performance Improvements
+
+* **hub:** remove unecessary debt api call ([#3104](https://github.com/ovh/manager/issues/3104)) ([08830f1](https://github.com/ovh/manager/commit/08830f1b0451859652a2e1061a43258d5e4ac8d7))
+
+
+
+## [1.4.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.4.0...@ovh-ux/manager-hub-app@1.4.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+### Performance Improvements
+
+* **hub:** replace lodash with lodash-es ([#3051](https://github.com/ovh/manager/issues/3051)) ([a9e765d](https://github.com/ovh/manager/commit/a9e765d42402381b2836c05db71da0b17b3debd6))
+
+
+### Reverts
+
+* Revert "fix: remove ui consistency" ([5435159](https://github.com/ovh/manager/commit/543515950323b10d054ba354ff0054c5a8a3d3d1))
+
+
+
+# [1.4.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.3.0...@ovh-ux/manager-hub-app@1.4.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* remove ui consistency ([#3029](https://github.com/ovh/manager/issues/3029)) ([34be0be](https://github.com/ovh/manager/commit/34be0bea216d575254017265d5650dace12ae582))
+* **i18n:** add missing translations [CDS 408] ([5cf4373](https://github.com/ovh/manager/commit/5cf43736425444537540366fe32340cd0561e368))
+* fix styles to match ui specs ([43132ff](https://github.com/ovh/manager/commit/43132ff4d6b32375deeb779621740b04cafb67c2))
+
+
+### Features
+
+* **dashboard:** inject support data from hub aapi ([aa41763](https://github.com/ovh/manager/commit/aa41763a26838afe2df0b801f0034422a19f6aa8))
+* **order-dashboard:** display assistance request ([d93683a](https://github.com/ovh/manager/commit/d93683a653db79b39365323d6fec6c60f155c022))
+* add ovhcloud light theme imports ([24d56fb](https://github.com/ovh/manager/commit/24d56fb62a949e01de5f9929c0fe53239c889a59))
+
+
+
+# [1.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.2.0...@ovh-ux/manager-hub-app@1.3.0) (2020-05-13)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 379] ([395eb80](https://github.com/ovh/manager/commit/395eb800b416a4fc2dd6567c0e8ef7dccc8a979b))
+
+
+### Features
+
+* **dashboard.catalog:** add searchable attribute on catalog filters ([#2870](https://github.com/ovh/manager/issues/2870)) ([b66bdfe](https://github.com/ovh/manager/commit/b66bdfe143fcbecbf369d7dae6c9b92e1a68e0fa))
+
+
+
+# [1.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.1.4...@ovh-ux/manager-hub-app@1.2.0) (2020-04-28)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 356] ([d2ae13f](https://github.com/ovh/manager/commit/d2ae13f6679c081a2514a9dafad4955265a4d9bd))
+* **i18n:** add missing translations [CDS 357] ([409dc06](https://github.com/ovh/manager/commit/409dc06ae0fc802fe23b859a037347d60908fe4e))
+
+
+### Features
+
+* add skip nav functionality ([#2849](https://github.com/ovh/manager/issues/2849)) ([5d1d8df](https://github.com/ovh/manager/commit/5d1d8df3428595032a37d58bb5b41a9fb1eff95e))
+* **catalog:** add tracking ([#2724](https://github.com/ovh/manager/issues/2724)) ([4c04c0d](https://github.com/ovh/manager/commit/4c04c0d93829a01b957bdfa7af8c6e5436521264))
+* **products:** update navigation tracking ([80676e9](https://github.com/ovh/manager/commit/80676e9d1c48575f5bed89de558bf910381f4a28))
+
+
+
+## [1.1.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.1.3...@ovh-ux/manager-hub-app@1.1.4) (2020-04-20)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 357] ([#2811](https://github.com/ovh/manager/issues/2811)) ([953c51b](https://github.com/ovh/manager/commit/953c51b39eee04c2b2be61269a4948a1f1b50a51))
+
+
+
+## [1.1.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.1.2...@ovh-ux/manager-hub-app@1.1.3) (2020-04-16)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 345] ([4a0673e](https://github.com/ovh/manager/commit/4a0673e9627b44076e7d9f641060a04a705be0bc))
+
+
+
 ## [1.1.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub-app@1.1.1...@ovh-ux/manager-hub-app@1.1.2) (2020-04-15)
 
 

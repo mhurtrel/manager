@@ -1,4 +1,4 @@
-import get from 'lodash/get';
+import { get } from 'lodash-es';
 
 import { ListLayoutHelper } from '@ovh-ux/manager-ng-layout-helpers';
 import { urlQueryParams, params, component, resolves } from './config';
@@ -23,6 +23,9 @@ export default /* @ngInject */ ($stateProvider) => {
         ),
       }),
       productType: () => 'IP_SERVICE',
+    },
+    atInternet: {
+      rename: 'app::dashboard::products::ip-service',
     },
   });
 };

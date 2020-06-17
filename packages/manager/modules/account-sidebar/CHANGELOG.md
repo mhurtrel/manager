@@ -1,3 +1,30 @@
+## [1.3.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-account-sidebar@1.3.2...@ovh-ux/manager-account-sidebar@1.3.3) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+
+## [1.3.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-account-sidebar@1.3.1...@ovh-ux/manager-account-sidebar@1.3.2) (2020-06-02)
+
+
+### Bug Fixes
+
+* fix styles to match ui specs ([43132ff](https://github.com/ovh/manager/commit/43132ff4d6b32375deeb779621740b04cafb67c2))
+
+
+
+## [1.3.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-account-sidebar@1.3.0...@ovh-ux/manager-account-sidebar@1.3.1) (2020-04-16)
+
+
+### Bug Fixes
+
+* **user-infos:** display translation when loaded ([#2728](https://github.com/ovh/manager/issues/2728)) ([2bd18dd](https://github.com/ovh/manager/commit/2bd18dd12ac0d7065f74e4b1d9ab772f1164dca8))
+
+
+
 # [1.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-account-sidebar@1.2.0...@ovh-ux/manager-account-sidebar@1.3.0) (2020-04-08)
 
 

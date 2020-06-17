@@ -1,3 +1,87 @@
+# [3.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.2.1...@ovh-ux/manager-navbar@3.3.0) (2020-06-16)
+
+
+### Features
+
+* allow notifications without links ([#2985](https://github.com/ovh/manager/issues/2985)) ([ded2c2f](https://github.com/ovh/manager/commit/ded2c2ffef57d7dcd3d3d2cca3a02a9e8db6be6c))
+
+
+
+## [3.2.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.2.0...@ovh-ux/manager-navbar@3.2.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+
+# [3.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.6...@ovh-ux/manager-navbar@3.2.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* fix styles to match ui specs ([43132ff](https://github.com/ovh/manager/commit/43132ff4d6b32375deeb779621740b04cafb67c2))
+* **navbar:** notification text not visible in dark mode ([#2732](https://github.com/ovh/manager/issues/2732)) ([524bae6](https://github.com/ovh/manager/commit/524bae63b42b78dbbbd5e2c48e4bd42950d9af7d))
+
+
+### Features
+
+* **sidebar:** apply ovhcloud light theme ([cf38dc9](https://github.com/ovh/manager/commit/cf38dc9e5a788062f22fdbc1432aa36f0edbb29a))
+
+
+
+## [3.1.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.5...@ovh-ux/manager-navbar@3.1.6) (2020-05-13)
+
+
+### Bug Fixes
+
+* **translations:** clean translations files ([ac02afd](https://github.com/ovh/manager/commit/ac02afd7ef2f92be18ec3952f937091cc4998bea))
+
+
+
+## [3.1.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.4...@ovh-ux/manager-navbar@3.1.5) (2020-04-28)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 356] ([d2ae13f](https://github.com/ovh/manager/commit/d2ae13f6679c081a2514a9dafad4955265a4d9bd))
+* **i18n:** add missing translations [CDS 357] ([409dc06](https://github.com/ovh/manager/commit/409dc06ae0fc802fe23b859a037347d60908fe4e))
+* **i18n:** add missing translations [CDS 363] ([7744b56](https://github.com/ovh/manager/commit/7744b566803e45dd7863d43b21764b5a935fd52f))
+* **i18n:** add missing translations [CDS 368] ([d6f6809](https://github.com/ovh/manager/commit/d6f6809ea899cfbd3118f1ee242e0ccc4db7ee8e))
+
+
+
+## [3.1.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.3...@ovh-ux/manager-navbar@3.1.4) (2020-04-21)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 363] ([33e18d9](https://github.com/ovh/manager/commit/33e18d9ca00a9428eaf70f76ea2adc92c32891d6))
+
+
+
+## [3.1.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.2...@ovh-ux/manager-navbar@3.1.3) (2020-04-20)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 357] ([#2811](https://github.com/ovh/manager/issues/2811)) ([953c51b](https://github.com/ovh/manager/commit/953c51b39eee04c2b2be61269a4948a1f1b50a51))
+
+
+
+## [3.1.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.1...@ovh-ux/manager-navbar@3.1.2) (2020-04-16)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 335] ([eae91e9](https://github.com/ovh/manager/commit/eae91e9fbf779b3c6e0a34066725d42df764639a))
+* **i18n:** add missing translations [CDS 351] ([c76b783](https://github.com/ovh/manager/commit/c76b783ee6ef33f08cb22361ef45eb583cff3221))
+* **i18n:** add missing translations [CDS 353] ([dd57828](https://github.com/ovh/manager/commit/dd578281ceaa43df230eb4e78aa264f78c57827b))
+* prevent override of background-color ([#2758](https://github.com/ovh/manager/issues/2758)) ([3c1c862](https://github.com/ovh/manager/commit/3c1c8625080a1a4751948d758a192ba4c8d7b341))
+
+
+
 ## [3.1.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-navbar@3.1.0...@ovh-ux/manager-navbar@3.1.1) (2020-04-15)
 
 
@@ -64,7 +148,6 @@
 * **hub:** init @ovh-ux/manager-account-sidebar module
 * **navbar:** Language menu is no longer available from navbar
 
-Signed-off-by: Marie JONES <marie.jones@corp.ovh.com>
 
 
 

@@ -1,3 +1,69 @@
+# [1.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.1.3...@ovh-ux/manager-hub@1.2.0) (2020-06-16)
+
+
+### Features
+
+* allow notifications without links ([#2985](https://github.com/ovh/manager/issues/2985)) ([ded2c2f](https://github.com/ovh/manager/commit/ded2c2ffef57d7dcd3d3d2cca3a02a9e8db6be6c))
+
+
+
+## [1.1.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.1.2...@ovh-ux/manager-hub@1.1.3) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+### Performance Improvements
+
+* **hub:** replace lodash with lodash-es ([#3051](https://github.com/ovh/manager/issues/3051)) ([a9e765d](https://github.com/ovh/manager/commit/a9e765d42402381b2836c05db71da0b17b3debd6))
+
+
+
+## [1.1.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.1.1...@ovh-ux/manager-hub@1.1.2) (2020-06-02)
+
+
+### Bug Fixes
+
+* fix styles to match ui specs ([43132ff](https://github.com/ovh/manager/commit/43132ff4d6b32375deeb779621740b04cafb67c2))
+
+
+
+## [1.1.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.1.0...@ovh-ux/manager-hub@1.1.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* **payment-status:** fix display for services with manual renew ([#2872](https://github.com/ovh/manager/issues/2872)) ([87fa7a9](https://github.com/ovh/manager/commit/87fa7a9885987cb7b2e0f50c97a157df062d304c))
+* **translations:** clean translations files ([ac02afd](https://github.com/ovh/manager/commit/ac02afd7ef2f92be18ec3952f937091cc4998bea))
+
+
+
+# [1.1.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.0.3...@ovh-ux/manager-hub@1.1.0) (2020-04-28)
+
+
+### Features
+
+* **catalog:** add tracking ([#2724](https://github.com/ovh/manager/issues/2724)) ([4c04c0d](https://github.com/ovh/manager/commit/4c04c0d93829a01b957bdfa7af8c6e5436521264))
+* **products:** update navigation tracking ([80676e9](https://github.com/ovh/manager/commit/80676e9d1c48575f5bed89de558bf910381f4a28))
+
+
+
+## [1.0.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.0.2...@ovh-ux/manager-hub@1.0.3) (2020-04-16)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 335] ([eae91e9](https://github.com/ovh/manager/commit/eae91e9fbf779b3c6e0a34066725d42df764639a))
+
+
+### Performance Improvements
+
+* **support:** optimize asset compression ([#2748](https://github.com/ovh/manager/issues/2748)) ([223a608](https://github.com/ovh/manager/commit/223a608ed785ee761fc0a0fa265eaf6852993e4c))
+
+
+
 ## [1.0.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@1.0.1...@ovh-ux/manager-hub@1.0.2) (2020-04-06)
 
 
@@ -95,7 +161,6 @@
 
 * create stable version for hub
 
-Signed-off-by: Marie JONES <marie.jones@corp.ovh.com>
 * **hub:** init @ovh-ux/manager-account-sidebar module
 
 

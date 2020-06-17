@@ -1,7 +1,4 @@
-import find from 'lodash/find';
-import get from 'lodash/get';
-import indexOf from 'lodash/indexOf';
-import map from 'lodash/map';
+import { find, get, indexOf, map } from 'lodash-es';
 
 /**
  * @ngdoc service
@@ -119,6 +116,15 @@ export default class TranslateServiceProvider {
 
     // Not found
     return this.LANGUAGES.defaultLoc;
+  }
+
+  /**
+   * BCP 47 (also known as IETF language tag) is an international standard to identify human languages
+   * @param {string} language The language to convert, in the OVHcloud format (i.e.: 'fr_FR')
+   * @returns {string} The languag converted to BCP 47 (i.e.: 'fr-FR')
+   */
+  static convertFromOVHToBCP47(language) {
+    return language.replace('_', '-');
   }
 
   $get() {

@@ -32,6 +32,8 @@ export default /* @ngInject */ function VpsService(
 
   const vpsTabVeeamCache = $cacheFactory('UNIVERS_WEB_VPS_TABS_VEEAM');
 
+  const apiCatalogProductName = 'vps';
+
   const vpsTabBackupStorageCache = $cacheFactory(
     'UNIVERS_WEB_VPS_TABS_BACKUP_STORAGE',
   );
@@ -447,7 +449,7 @@ export default /* @ngInject */ function VpsService(
         }
         return $q.reject(result);
       })
-      .catch(CucServiceHelper.errorHandler('vps_dashboard_loading_error'));
+      .catch((error) => error);
   };
 
   /*
@@ -1324,15 +1326,6 @@ export default /* @ngInject */ function VpsService(
     );
   };
 
-  // Additional disks
-  this.hasAdditionalDiskOption = (serviceName) =>
-    this.getSelectedVps(serviceName).then((vps) => {
-      if (!includes(vps.availableOptions, 'ADDITIONAL_DISK')) {
-        return $q.reject(ADDITIONAL_DISK.HAS_NO_OPTION);
-      }
-      return this.canOrderOption(serviceName, 'additionalDisk');
-    });
-
   this.canOrderOption = (serviceName, optionName) =>
     $http.get([swsOrderProxypass, serviceName].join('/')).then((response) => {
       if (includes(response.data, optionName)) {
@@ -1477,5 +1470,21 @@ export default /* @ngInject */ function VpsService(
     return this.getSelectedVps(serviceName).then(
       (vps) => moment(vps.expiration).diff(moment().date(), 'days') > 0,
     );
+  };
+
+  this.getCatalog = function(ovhSubsidiary) {
+    return $http
+      .get(`/order/catalog/public/${apiCatalogProductName}`, {
+        params: {
+          ovhSubsidiary,
+        },
+      })
+      .then(({ data }) => data);
+  };
+
+  this.updateServiceInfo = function updateServiceInfo(serviceInfo) {
+    return $http.put(`${swsVpsProxypass}/${serviceInfo.domain}/serviceInfos`, {
+      renew: serviceInfo.renew,
+    });
   };
 }

@@ -28,11 +28,13 @@ import ovhManagerVpsDashboard from './dashboard';
 import ovhManagerVpsMonitoring from './monitoring';
 import ovhManagerVpsSecondaryDns from './secondary-dns';
 import ovhManagerVpsSnapshot from './snapshot';
+import ovhManagerVpsUpscale from './upscale';
 import ovhManagerVpsUpgrade from './upgrade';
 import ovhManagerVpsVeeam from './veeam';
 import ovhManagerVpsWindows from './windows';
 
 import 'ovh-ui-kit/dist/oui.css';
+import 'ovh-ui-kit/dist/oui-olt.css';
 import './vps.less';
 import './vps.scss';
 
@@ -58,6 +60,7 @@ angular
     ovhManagerVpsMonitoring,
     ovhManagerVpsSecondaryDns,
     ovhManagerVpsSnapshot,
+    ovhManagerVpsUpscale,
     ovhManagerVpsUpgrade,
     ovhManagerVpsVeeam,
     ovhManagerVpsWindows,

@@ -1,3 +1,134 @@
+## [12.3.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.3.2...@ovh-ux/manager-telecom@12.3.3) (2020-06-15)
+
+
+### Bug Fixes
+
+* fix actions menu colors ([#3107](https://github.com/ovh/manager/issues/3107)) ([6b66467](https://github.com/ovh/manager/commit/6b6646735ad0021d4b28a7df0704e9c507a3ea3f))
+
+
+
+## [12.3.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.3.1...@ovh-ux/manager-telecom@12.3.2) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+### Reverts
+
+* Revert "fix: remove ui consistency" ([5435159](https://github.com/ovh/manager/commit/543515950323b10d054ba354ff0054c5a8a3d3d1))
+
+
+
+## [12.3.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.3.0...@ovh-ux/manager-telecom@12.3.1) (2020-06-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies with latest version ([#3057](https://github.com/ovh/manager/issues/3057)) ([24d06ad](https://github.com/ovh/manager/commit/24d06addfaab0716e725242beae2d3d92feb8856))
+
+
+
+# [12.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.2.0...@ovh-ux/manager-telecom@12.3.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* **translations:** clean translations files ([#3038](https://github.com/ovh/manager/issues/3038)) ([57040ad](https://github.com/ovh/manager/commit/57040adfcac601cbf48f27fb804decfd60800797))
+* remove ui consistency ([#3029](https://github.com/ovh/manager/issues/3029)) ([34be0be](https://github.com/ovh/manager/commit/34be0bea216d575254017265d5650dace12ae582))
+* **i18n:** add missing translations [CDS 418] ([2e6cd3a](https://github.com/ovh/manager/commit/2e6cd3a40a05108683bf90c75db9a3a8cf80fd59))
+
+
+### Features
+
+* add ovhcloud light theme imports ([24d56fb](https://github.com/ovh/manager/commit/24d56fb62a949e01de5f9929c0fe53239c889a59))
+* **sidebar:** apply ovhcloud light theme ([cf38dc9](https://github.com/ovh/manager/commit/cf38dc9e5a788062f22fdbc1432aa36f0edbb29a))
+* **telephony.billingaccount.administration:** preload all groups ([#2810](https://github.com/ovh/manager/issues/2810)) ([ab384d2](https://github.com/ovh/manager/commit/ab384d27247a8d81bbcca464ca6cc1957fbf4222))
+* **telephony.order.phone:** add message for rma ([#2896](https://github.com/ovh/manager/issues/2896)) ([e65c04d](https://github.com/ovh/manager/commit/e65c04d93b792429a879dfe75fbca051658005a0))
+
+
+
+# [12.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.1.4...@ovh-ux/manager-telecom@12.2.0) (2020-05-13)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 383] ([a784a99](https://github.com/ovh/manager/commit/a784a999d869e4b069b7d56f33bb53048fa06bc8))
+* **i18n:** add missing translations [CDS 384] ([0533103](https://github.com/ovh/manager/commit/0533103f992337a5ee7491aa2594c9f39c1e99f0))
+* **translations:** clean translations files ([ac02afd](https://github.com/ovh/manager/commit/ac02afd7ef2f92be18ec3952f937091cc4998bea))
+
+
+### Features
+
+* **pack:** remove old ws call from xdsl hosted email section ([#2629](https://github.com/ovh/manager/issues/2629)) ([6169657](https://github.com/ovh/manager/commit/616965769ca4694419eb30e70db9972befcc93c3))
+
+
+
+## [12.1.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.1.3...@ovh-ux/manager-telecom@12.1.4) (2020-05-07)
+
+
+### Bug Fixes
+
+* **pack.slots.voip.line.activation:** filter down the selected phones([#2903](https://github.com/ovh/manager/issues/2903)) ([fd5d236](https://github.com/ovh/manager/commit/fd5d236a5b17c6d0a55546775752751542f102c2))
+
+
+
+## [12.1.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.1.2...@ovh-ux/manager-telecom@12.1.3) (2020-04-28)
+
+
+### Bug Fixes
+
+* **telephony.line.phone.order.choice:** fix links for images and technical docs ([#2863](https://github.com/ovh/manager/issues/2863)) ([63a3acd](https://github.com/ovh/manager/commit/63a3acd13cee84a2b4d0d7ccca6e668eba587925))
+
+
+
+## [12.1.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.1.1...@ovh-ux/manager-telecom@12.1.2) (2020-04-28)
+
+
+### Bug Fixes
+
+* **telephony:** allow contact edition for foreign numbers ([#2785](https://github.com/ovh/manager/issues/2785)) ([31226cc](https://github.com/ovh/manager/commit/31226cc62848dd8a0982fe429df6ffb2eef5b764))
+
+
+
+## [12.1.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.1.0...@ovh-ux/manager-telecom@12.1.1) (2020-04-28)
+
+
+### Bug Fixes
+
+* **telephony.line.phone:** fix phone config for new phones ([#2857](https://github.com/ovh/manager/issues/2857)) ([ff6fef5](https://github.com/ovh/manager/commit/ff6fef5298ed5fe35dbfec8d29c958f58ee02b52))
+
+
+
+# [12.1.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.0.4...@ovh-ux/manager-telecom@12.1.0) (2020-04-27)
+
+
+### Features
+
+* add update phone range ([#2445](https://github.com/ovh/manager/issues/2445)) ([e610b48](https://github.com/ovh/manager/commit/e610b48e0f37ef859a92f4bc6973466d6f12c310))
+
+
+
+## [12.0.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.0.3...@ovh-ux/manager-telecom@12.0.4) (2020-04-20)
+
+
+### Bug Fixes
+
+* **telephony.time-condition:** add condition for draft time ([#2571](https://github.com/ovh/manager/issues/2571)) ([479b5a3](https://github.com/ovh/manager/commit/479b5a36197564b0c341c6b3580615b48d834e12))
+
+
+
+## [12.0.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.0.2...@ovh-ux/manager-telecom@12.0.3) (2020-04-16)
+
+
+### Bug Fixes
+
+* use ovh-contracts-summary component ([#2650](https://github.com/ovh/manager/issues/2650)) ([1bd8d23](https://github.com/ovh/manager/commit/1bd8d2390f77c7fa3b970121070bfdd234e1809a))
+* **i18n:** add missing translations [CDS 337] ([94eb225](https://github.com/ovh/manager/commit/94eb225484020949ed1ef946755bdbc4f228efc8))
+
+
+
 ## [12.0.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-telecom@12.0.1...@ovh-ux/manager-telecom@12.0.2) (2020-04-15)
 
 
@@ -382,8 +513,6 @@
 ### BREAKING CHANGES
 
 * module is now named as `ngUiRouterTitle
-
-Signed-off-by: Antoine Leblanc <antoine.leblanc@corp.ovh.com>
 
 
 

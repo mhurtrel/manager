@@ -1,3 +1,21 @@
+# [1.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-models@1.1.0...@ovh-ux/manager-models@1.2.0) (2020-06-02)
+
+
+### Features
+
+* **billing.confirm-terminate:** revamp termination form ([faf2755](https://github.com/ovh/manager/commit/faf2755a34c41691f55f11f1ea8ca463cb9bf550))
+
+
+
+# [1.1.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-models@1.0.1...@ovh-ux/manager-models@1.1.0) (2020-04-20)
+
+
+### Features
+
+* **models:** add utilitarian Price class ([a336d30](https://github.com/ovh/manager/commit/a336d3038e603cc14cdf0b43f68b63d69f844bf3))
+
+
+
 ## [1.0.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-models@1.0.0...@ovh-ux/manager-models@1.0.1) (2020-04-15)
 
 
@@ -18,8 +36,3 @@
 ### BREAKING CHANGES
 
 * init @ovh-ux/manager-models module
-
-Signed-off-by: Marie JONES <marie.jones@corp.ovh.com>
-
-
-

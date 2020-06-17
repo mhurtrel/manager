@@ -1,3 +1,61 @@
+## [1.3.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-product-offers@1.3.0...@ovh-ux/manager-product-offers@1.3.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+
+# [1.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-product-offers@1.2.0...@ovh-ux/manager-product-offers@1.3.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 410] ([19f33b5](https://github.com/ovh/manager/commit/19f33b5f2e4893f855068f4f908aea5792a20ebe))
+* **i18n:** add missing translations [CDS 414] ([7601c89](https://github.com/ovh/manager/commit/7601c89ff863c8fbbcbe76442a1ceca13051ced4))
+* **product-offers:** fix test is free with extra pricing ([e51ca0c](https://github.com/ovh/manager/commit/e51ca0cb4bcad9f2949e87fcb01d390a2085a2a7))
+
+
+### Features
+
+* **product-offers:** add termination date if extra pricing not free ([7e52024](https://github.com/ovh/manager/commit/7e52024a97f5a999e97a03b40ec7b6816ce3e1a2))
+* autopay detach if it is free ([7e4d76c](https://github.com/ovh/manager/commit/7e4d76c0112672805678b4661c425fe59f5b189c))
+
+
+
+# [1.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-product-offers@1.1.1...@ovh-ux/manager-product-offers@1.2.0) (2020-05-13)
+
+
+### Features
+
+* **product-offers:** force camel case payment method param ([38917ff](https://github.com/ovh/manager/commit/38917ff88e0c56ea41badf7c233fa22b4c6b3975))
+
+
+
+## [1.1.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-product-offers@1.1.0...@ovh-ux/manager-product-offers@1.1.1) (2020-05-04)
+
+
+### Bug Fixes
+
+* **workflow:** autopay order only if customer has payment mean ([#2881](https://github.com/ovh/manager/issues/2881)) ([5b73b3c](https://github.com/ovh/manager/commit/5b73b3c5cf4ef7388787524ea47ec7a3eff52290))
+
+
+
+# [1.1.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-product-offers@1.0.4...@ovh-ux/manager-product-offers@1.1.0) (2020-04-28)
+
+
+### Bug Fixes
+
+* display text depending on price ([7ea01d1](https://github.com/ovh/manager/commit/7ea01d1c2b922b7847bcd3bf23aa02abde061621))
+
+
+### Features
+
+* update dns zone standalone order ([16b5fd7](https://github.com/ovh/manager/commit/16b5fd75bc2622574a0dadd8b613031fe5b7ef77))
+
+
+
 ## [1.0.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-product-offers@1.0.3...@ovh-ux/manager-product-offers@1.0.4) (2020-04-15)
 
 
@@ -51,9 +109,3 @@
 ### BREAKING CHANGES
 
 * **modules:** This module initialize the component 'product-offers'
-
-Signed-off-by: Jérémy De-Cesare <jeremy.de-cesare@corp.ovh.com>
-Co-authored-by: Frédéric Espiau <frederic.espiau@corp.ovh.com>
-
-
-

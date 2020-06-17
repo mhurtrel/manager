@@ -1,3 +1,80 @@
+# [5.5.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.4.2...@ovh-ux/manager-overthebox@5.5.0) (2020-06-16)
+
+
+### Features
+
+* **details:** add release channels ([#3045](https://github.com/ovh/manager/issues/3045)) ([28e6f08](https://github.com/ovh/manager/commit/28e6f08b7086ca4dbca9ccd6e3f9602a88c58ecd))
+
+
+
+## [5.4.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.4.1...@ovh-ux/manager-overthebox@5.4.2) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+### Reverts
+
+* Revert "fix: remove ui consistency" ([5435159](https://github.com/ovh/manager/commit/543515950323b10d054ba354ff0054c5a8a3d3d1))
+
+
+
+## [5.4.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.4.0...@ovh-ux/manager-overthebox@5.4.1) (2020-06-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies with latest version ([#3057](https://github.com/ovh/manager/issues/3057)) ([24d06ad](https://github.com/ovh/manager/commit/24d06addfaab0716e725242beae2d3d92feb8856))
+
+
+
+# [5.4.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.3.3...@ovh-ux/manager-overthebox@5.4.0) (2020-06-02)
+
+
+### Bug Fixes
+
+* remove ui consistency ([#3029](https://github.com/ovh/manager/issues/3029)) ([34be0be](https://github.com/ovh/manager/commit/34be0bea216d575254017265d5650dace12ae582))
+* **overthebox:** remove useless update application action ([#2898](https://github.com/ovh/manager/issues/2898)) ([4bbe218](https://github.com/ovh/manager/commit/4bbe2186f124a657cd98a084adea6942d149cf2d))
+
+
+### Features
+
+* add ovhcloud light theme imports ([24d56fb](https://github.com/ovh/manager/commit/24d56fb62a949e01de5f9929c0fe53239c889a59))
+
+
+
+## [5.3.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.3.2...@ovh-ux/manager-overthebox@5.3.3) (2020-04-28)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 356] ([d2ae13f](https://github.com/ovh/manager/commit/d2ae13f6679c081a2514a9dafad4955265a4d9bd))
+* **i18n:** add missing translations [CDS 357] ([409dc06](https://github.com/ovh/manager/commit/409dc06ae0fc802fe23b859a037347d60908fe4e))
+
+
+
+## [5.3.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.3.1...@ovh-ux/manager-overthebox@5.3.2) (2020-04-20)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 357] ([#2811](https://github.com/ovh/manager/issues/2811)) ([953c51b](https://github.com/ovh/manager/commit/953c51b39eee04c2b2be61269a4948a1f1b50a51))
+
+
+
+## [5.3.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.3.0...@ovh-ux/manager-overthebox@5.3.1) (2020-04-16)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 345] ([4a0673e](https://github.com/ovh/manager/commit/4a0673e9627b44076e7d9f641060a04a705be0bc))
+* **i18n:** add missing translations [CDS 353] ([dd57828](https://github.com/ovh/manager/commit/dd578281ceaa43df230eb4e78aa264f78c57827b))
+* use ovh-contracts-summary component ([#2650](https://github.com/ovh/manager/issues/2650)) ([1bd8d23](https://github.com/ovh/manager/commit/1bd8d2390f77c7fa3b970121070bfdd234e1809a))
+
+
+
 # [5.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-overthebox@5.2.3...@ovh-ux/manager-overthebox@5.3.0) (2020-04-15)
 
 
@@ -86,8 +163,6 @@
 ### BREAKING CHANGES
 
 * module is now named as `ngUiRouterTitle
-
-Signed-off-by: Antoine Leblanc <antoine.leblanc@corp.ovh.com>
 
 
 

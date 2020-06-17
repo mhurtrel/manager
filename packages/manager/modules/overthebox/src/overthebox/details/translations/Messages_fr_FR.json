@@ -42,8 +42,6 @@
   "overTheBox_action_update_label": "Mettre à jour",
   "overTheBox_action_launch_success": "L'action à distance a été transmise à votre appareil avec succès. Cette action peut prendre quelques minutes.",
   "overTheBox_action_launch_error": "L'action à distance n'a pas pu être exécutée par votre appareil. Veuillez recommencer.",
-  "overTheBox_action_upgrade_title": "Effectuer une mise à jour des applications",
-  "overTheBox_action_upgrade_label": "Entraîne une simple mise à jour des applications overthebox.",
   "overTheBox_action_sysupgrade_title": "Effectuer la mise à jour du système",
   "overTheBox_action_sysupgrade_label": "Entraîne une réinstallation, un redémarrage de la machine avec une sauvegarde de votre configuration.",
   "overTheBox_graph_filter_last5min": "Les dernières 5 min",
@@ -70,5 +68,13 @@
   "overTheBox_resiliation_cancel_error": "Oups ! Nous n'avons pas pu annuler la résiliation en cours du service {{service}}.",
   "overTheBox_cancel_resiliation_success": "La résiliation de votre service {{service}} vient d'être annulée.",
   "overTheBox_statistics_bits_per_sec_legend": "bits/s",
-  "overTheBox_expiration_warning_help": "Vous pouvez annuler la résiliation avant la date d'expiration."
+  "overTheBox_expiration_warning_help": "Vous pouvez annuler la résiliation avant la date d'expiration.",
+  "overTheBox_release_channels": "Versions disponibles",
+  "overTheBox_change_release_channel_success": "Le changement de la version a été effectué avec succès.",
+  "overTheBox_change_release_channel_error": "Nous n'avons pas pu effectuer le changement de la version : {{errorMessage}}",
+  "overTheBox_release_channel_stable": "Version stable grand publique",
+  "overTheBox_release_channel_testing": "Version beta",
+  "overTheBox_release_channel_unstable": "Version alpha",
+  "overTheBox_release_channel_develop": "Version de développement",
+  "overTheBox_release_channel_rpi3": "Version pour Raspberry 3"
 }

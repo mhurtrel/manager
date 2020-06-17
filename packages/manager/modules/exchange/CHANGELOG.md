@@ -1,3 +1,39 @@
+## [1.8.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-exchange@1.8.3...@ovh-ux/manager-exchange@1.8.4) (2020-06-09)
+
+
+### Bug Fixes
+
+* **emailpro:** fix header tabs button ([47d208b](https://github.com/ovh/manager/commit/47d208b44dcad2fedab44b6771d4da79a80dbfc9))
+
+
+
+## [1.8.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-exchange@1.8.2...@ovh-ux/manager-exchange@1.8.3) (2020-05-13)
+
+
+### Bug Fixes
+
+* **exchange:** add lazy loading futures states ([#2900](https://github.com/ovh/manager/issues/2900)) ([b84c770](https://github.com/ovh/manager/commit/b84c770beff062342962e3c3c031848dc770aeb2))
+
+
+
+## [1.8.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-exchange@1.8.1...@ovh-ux/manager-exchange@1.8.2) (2020-05-04)
+
+
+### Bug Fixes
+
+* **exchange:** export navigation service ([#2871](https://github.com/ovh/manager/issues/2871)) ([6778070](https://github.com/ovh/manager/commit/67780700c58523edf11a25aa156dd7121ca1b2be))
+
+
+
+## [1.8.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-exchange@1.8.0...@ovh-ux/manager-exchange@1.8.1) (2020-04-17)
+
+
+### Bug Fixes
+
+* load renew module ([#2800](https://github.com/ovh/manager/issues/2800)) ([b5ed9d8](https://github.com/ovh/manager/commit/b5ed9d8f0019140d160d23c8b98e20fed927793d))
+
+
+
 # [1.8.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-exchange@1.7.1...@ovh-ux/manager-exchange@1.8.0) (2020-04-15)
 
 

@@ -1,4 +1,4 @@
-import find from 'lodash/find';
+import { find, get } from 'lodash-es';
 
 import { ListLayoutHelper } from '@ovh-ux/manager-ng-layout-helpers';
 import { urlQueryParams, params, component, resolves } from './config';
@@ -34,6 +34,15 @@ export default /* @ngInject */ ($stateProvider) => {
       ...genericProductResolve,
       productType: /* @ngInject */ ($transition$) =>
         $transition$.params().product.toUpperCase(),
+    },
+    atInternet: {
+      rename: /* @ngInject */ ($state) =>
+        // We're limited with the possible injection as we listen to onBefore hook
+        `app::dashboard::products::${get(
+          $state.transition.params(),
+          'product',
+          '',
+        ).replace(/_/g, '-')}`,
     },
   });
 };

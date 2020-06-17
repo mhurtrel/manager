@@ -10,12 +10,12 @@ import last from 'lodash/last';
 import map from 'lodash/map';
 import maxBy from 'lodash/maxBy';
 import reduce from 'lodash/reduce';
-import set from 'lodash/set';
 import some from 'lodash/some';
 
 import {
   DNSSEC_STATUS,
   OWNER_CHANGE_URL,
+  PRODUCT_TYPE,
   PROTECTION_TYPES,
 } from './general-information.constants';
 
@@ -30,11 +30,15 @@ export default class DomainTabGeneralInformationsCtrl {
     $translate,
     Alerter,
     constants,
+    dnsAvailableOptions,
     Domain,
+    enableWebhostingLink,
     Hosting,
     HostingDomain,
+    isStart10mAvailable,
     OvhApiDomainRules,
     OvhApiScreenshot,
+    RedirectionService,
     User,
     WucAllDom,
     DOMAIN,
@@ -49,11 +53,15 @@ export default class DomainTabGeneralInformationsCtrl {
     this.$translate = $translate;
     this.Alerter = Alerter;
     this.WucAllDom = WucAllDom;
+    this.dnsAvailableOptions = dnsAvailableOptions;
     this.Domain = Domain;
+    this.enableWebhostingLink = enableWebhostingLink;
     this.Hosting = Hosting;
     this.HostingDomain = HostingDomain;
+    this.isStart10mAvailable = isStart10mAvailable;
     this.OvhApiDomainRules = OvhApiDomainRules;
     this.OvhApiScreenshot = OvhApiScreenshot.Aapi();
+    this.RedirectionService = RedirectionService;
     this.User = User;
     this.constants = constants;
     this.DOMAIN = DOMAIN;
@@ -174,21 +182,25 @@ export default class DomainTabGeneralInformationsCtrl {
   }
 
   initActions() {
+    const contactManagementUrl = this.RedirectionService.getURL(
+      'contactManagement',
+      {
+        serviceName: this.domain.name,
+        category: PRODUCT_TYPE,
+      },
+    );
     this.actions = {
       manageContact: {
         text: this.$translate.instant('common_manage_contacts'),
-        href: `#/useraccount/contacts?tab=SERVICES&serviceName=${this.domain.name}&category=DOMAIN`,
-        isAvailable: () => true,
+        href: contactManagementUrl,
       },
       changeOwner: {
         text: this.$translate.instant('core_change_owner'),
         href: '',
-        isAvailable: () => true,
       },
       manageAutorenew: {
         text: this.$translate.instant('common_manage'),
         href: `#/billing/autoRenew?searchText=${this.domain.name}&selectedType=DOMAIN`,
-        isAvailable: () => true,
       },
       manageAlldom: {
         href: `#/billing/autoRenew?searchText=${this.allDom}&selectedType=ALL_DOM`,
@@ -528,19 +540,6 @@ export default class DomainTabGeneralInformationsCtrl {
       nameServers: this.nameServers,
       dnsStatus: this.dnsStatus,
     });
-  }
-
-  showWebHostingOrderWithStartOffer() {
-    const domain = angular.copy(this.domain);
-    set(
-      domain,
-      'selected.offer',
-      this.constants.HOSTING.OFFERS.START_10_M.LIST_VALUE,
-    );
-    this.$scope.setAction(
-      'webhosting-enable/domain-enable-web-hosting',
-      domain,
-    );
   }
 
   switchTheStateOfProtection() {

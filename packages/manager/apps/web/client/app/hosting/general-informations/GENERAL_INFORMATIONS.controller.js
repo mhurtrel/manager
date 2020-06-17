@@ -1,5 +1,4 @@
 import head from 'lodash/head';
-import includes from 'lodash/includes';
 import isEmpty from 'lodash/isEmpty';
 import isObject from 'lodash/isObject';
 
@@ -21,6 +20,7 @@ export default class HostingGeneralInformationsCtrl {
     HostingRuntimes,
     hostingSSLCertificate,
     OvhApiScreenshot,
+    RedirectionService,
   ) {
     this.$q = $q;
     this.$scope = $scope;
@@ -36,6 +36,7 @@ export default class HostingGeneralInformationsCtrl {
     this.HostingRuntimes = HostingRuntimes;
     this.hostingSSLCertificate = hostingSSLCertificate;
     this.OvhApiScreenshot = OvhApiScreenshot;
+    this.RedirectionService = RedirectionService;
   }
 
   $onInit() {
@@ -43,6 +44,10 @@ export default class HostingGeneralInformationsCtrl {
     this.defaultRuntime = null;
     this.availableOffers = [];
 
+    this.contactManagementLink = this.RedirectionService.getURL(
+      'contactManagement',
+      { serviceName: this.serviceName },
+    );
     this.loading = {
       defaultRuntime: true,
       localSeo: true,
@@ -53,6 +58,18 @@ export default class HostingGeneralInformationsCtrl {
       isActive: false,
       quantity: 0,
     };
+
+    this.goToDetachEmail = this.$scope.goToDetachEmail;
+    this.goToDetachPrivateDB = this.$scope.goToDetachPrivateDB;
+    this.isDetachEmailOptionAvailable =
+      this.$scope.emailOptionDetachInformation.length > 0 &&
+      this.$scope.emailOptionDetachInformation[0].detachPlancodes.length > 0 &&
+      this.$scope.pendingTasks.length === 0;
+
+    this.isPrivateDatabaseDetachable =
+      this.$scope.privateDatabasesDetachable.length > 0 &&
+      this.$scope.privateDatabasesDetachable[0].detachPlancodes.length > 0 &&
+      this.$scope.pendingTasks.length === 0;
 
     const quotaUsed = this.$scope.convertBytesSize(
       this.$scope.hosting.quotaUsed.value,
@@ -76,7 +93,6 @@ export default class HostingGeneralInformationsCtrl {
         this.getScreenshot(),
         this.retrievingSSLCertificate(),
         this.retrievingAvailableOffers(this.serviceName),
-        this.getEmailOfferDetails(this.serviceName),
       ])
       .then(() => this.HostingRuntimes.getDefault(this.serviceName))
       .then((runtime) => {
@@ -222,57 +238,17 @@ export default class HostingGeneralInformationsCtrl {
     this.$state.go('app.hosting.upgrade', { productId: this.serviceName });
   }
 
-  changeMainDomain() {
-    this.atInternet.trackClick({
-      name: 'web::hostname::general-informations::change-main-domain',
-      type: 'action',
-    });
-    this.$scope.setAction(
-      'change-main-domain/hosting-change-main-domain',
-      this.$scope.hosting,
-    );
-  }
-
-  isHostingOffer() {
-    return !includes(
-      [
-        'KIMSUFI_2015',
-        '__60_FREE',
-        'DEMO_1_G',
-        'START_1_M',
-        'START_10_M',
-        '_ASPFREE',
-      ],
-      this.$scope.hosting.offer,
-    );
-  }
-
   goToBoostTab() {
     this.$scope.$parent.$ctrl.setSelectedTab('BOOST');
   }
 
-  getEmailOfferDetails(serviceName) {
-    this.isRetrievingEmailOffer = true;
-    return this.hostingEmailService
-      .getEmailOfferDetails(serviceName)
-      .then((offer) => {
-        this.emailOffer = offer;
-      })
-      .catch((error) => {
-        this.Alerter.alertFromSWS(
-          this.$translate.instant('hosting_dashboard_email_offer_get_error'),
-          error,
-          this.$scope.alerts.main,
-        );
-      })
-      .finally(() => {
-        this.isRetrievingEmailOffer = false;
-      });
+  goToPrivateSqlActivation() {
+    return this.$state.go('app.hosting.database.private-sql-activation');
   }
 
   doesEmailOfferExists() {
     // empty array means user has no email offer
-    return !isEmpty(this.emailOffer);
+    return !isEmpty(this.$scope.emailOptionIds);
   }
 
   activateEmailOffer() {
