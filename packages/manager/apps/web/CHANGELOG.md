@@ -1,3 +1,26 @@
+## [14.6.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@14.6.0...@ovh-ux/manager-web@14.6.1) (2020-06-17)
+
+
+### Bug Fixes
+
+* **domain.attach:** use hosting as param instead of domain ([#3025](https://github.com/ovh/manager/issues/3025)) ([84aad95](https://github.com/ovh/manager/commit/84aad95a2c637bc84563bb96c73ba2d3c0bdb8ef))
+
+
+
+# [14.6.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@14.5.0...@ovh-ux/manager-web@14.6.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* **constants:** add missing dns zone guide ([a57bb6f](https://github.com/ovh/manager/commit/a57bb6f1b2ebf2d9e50ca942fd40a5b55e873a13))
+
+
+### Features
+
+* **domain:** remove website configuration ([aee9af2](https://github.com/ovh/manager/commit/aee9af2f944620d1d4d2d4f832006d1304074076))
+
+
+
 # [14.5.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-web@14.4.2...@ovh-ux/manager-web@14.5.0) (2020-06-16)
 
 
