@@ -1,8 +1,9 @@
+import { PAGINATION_PER_PAGE } from './overTheBox-actions.constant';
+
 export default class OverTheBoxActionsCtrl {
   /* @ngInject */
-  constructor($translate, PAGINATION_PER_PAGE, OvhApiOverTheBoxDevice) {
+  constructor($translate, OvhApiOverTheBoxDevice) {
     this.$translate = $translate;
-    this.PAGINATION_PER_PAGE = PAGINATION_PER_PAGE;
     this.OvhApiOverTheBoxDevice = OvhApiOverTheBoxDevice;
   }
 
@@ -13,7 +14,7 @@ export default class OverTheBoxActionsCtrl {
 
     this.actionIds = [];
     this.filter = {
-      perPage: this.PAGINATION_PER_PAGE,
+      perPage: PAGINATION_PER_PAGE,
     };
     this.isError = false;
 

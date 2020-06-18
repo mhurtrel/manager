@@ -20,7 +20,10 @@
                     data-ng-click="$ctrl.getActions()"
                     title="{{'overTheBox_actions_refresh' | translate}}"
                 >
-                    <span class="fa fa-refresh" aria-hidden="true"></span>
+                    <span
+                        class="oui-icon oui-icon-refresh"
+                        aria-hidden="true"
+                    ></span>
                 </button>
             </div>
             <oui-datagrid
@@ -63,10 +66,10 @@
                     <span
                         class="oui-status"
                         data-ng-class="{
-                                'label-success': $row.status === 'done',
-                                'label-danger': $row.status === 'error',
-                                'label-info': $row.status === 'doing',
-                                'label-primary': $row.status === 'todo'
+                                'oui-status_success': $row.status === 'done',
+                                'oui-status_error': $row.status === 'error',
+                                'oui-status_info': $row.status === 'doing',
+                                'oui-status_info': $row.status === 'todo'
                             }"
                     >
                         <span
