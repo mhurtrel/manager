@@ -33,7 +33,6 @@ angular.module('managerApp').controller(
 
       this.process = this.TucPackMigrationProcess.getMigrationProcess();
 
-      console.log('buildings', this.process.selectedOffer.buildings);
       this.process.selectedOffer.buildings.forEach((building, i) => {
         // check if the building name is empty to set a name to display in the select component
         if (building.name === '') {
